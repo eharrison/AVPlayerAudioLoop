@@ -13,6 +13,10 @@
 		9464672D24AABBE800F8409A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9464672B24AABBE800F8409A /* Main.storyboard */; };
 		9464672F24AABBE900F8409A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9464672E24AABBE900F8409A /* Assets.xcassets */; };
 		9464673224AABBE900F8409A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9464673024AABBE900F8409A /* LaunchScreen.storyboard */; };
+		9464673A24AABC0800F8409A /* AVPlayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464673924AABC0800F8409A /* AVPlayerExtensions.swift */; };
+		9464673C24AABD0800F8409A /* water.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9464673B24AABD0800F8409A /* water.mp3 */; };
+		9464674324AABDD500F8409A /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9464674224AABDD500F8409A /* URLExtensions.swift */; };
+		9464674724AAC1C900F8409A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9464674624AAC1C900F8409A /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		9464672E24AABBE900F8409A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9464673124AABBE900F8409A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9464673324AABBE900F8409A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9464673924AABC0800F8409A /* AVPlayerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerExtensions.swift; sourceTree = "<group>"; };
+		9464673B24AABD0800F8409A /* water.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = water.mp3; sourceTree = "<group>"; };
+		9464674224AABDD500F8409A /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		9464674424AAC1C900F8409A /* AVPlayerAudioLoop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AVPlayerAudioLoop.entitlements; sourceTree = "<group>"; };
+		9464674624AAC1C900F8409A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9464674724AAC1C900F8409A /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				9464672424AABBE800F8409A /* AVPlayerAudioLoop */,
 				9464672324AABBE800F8409A /* Products */,
+				9464674524AAC1C900F8409A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +67,59 @@
 		9464672424AABBE800F8409A /* AVPlayerAudioLoop */ = {
 			isa = PBXGroup;
 			children = (
+				9464674424AAC1C900F8409A /* AVPlayerAudioLoop.entitlements */,
+				9464674124AABD5200F8409A /* Modules */,
+				9464674024AABD4C00F8409A /* Library */,
+				9464673D24AABD0D00F8409A /* Assets */,
+				9464673F24AABD3500F8409A /* Supporting Files */,
+			);
+			path = AVPlayerAudioLoop;
+			sourceTree = "<group>";
+		};
+		9464673D24AABD0D00F8409A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9464673B24AABD0800F8409A /* water.mp3 */,
+				9464672E24AABBE900F8409A /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9464673F24AABD3500F8409A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				9464672524AABBE800F8409A /* AppDelegate.swift */,
 				9464672724AABBE800F8409A /* SceneDelegate.swift */,
-				9464672924AABBE800F8409A /* ViewController.swift */,
-				9464672B24AABBE800F8409A /* Main.storyboard */,
-				9464672E24AABBE900F8409A /* Assets.xcassets */,
 				9464673024AABBE900F8409A /* LaunchScreen.storyboard */,
 				9464673324AABBE900F8409A /* Info.plist */,
 			);
-			path = AVPlayerAudioLoop;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9464674024AABD4C00F8409A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9464673924AABC0800F8409A /* AVPlayerExtensions.swift */,
+				9464674224AABDD500F8409A /* URLExtensions.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9464674124AABD5200F8409A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9464672B24AABBE800F8409A /* Main.storyboard */,
+				9464672924AABBE800F8409A /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9464674524AAC1C900F8409A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9464674624AAC1C900F8409A /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +182,7 @@
 			files = (
 				9464673224AABBE900F8409A /* LaunchScreen.storyboard in Resources */,
 				9464672F24AABBE900F8409A /* Assets.xcassets in Resources */,
+				9464673C24AABD0800F8409A /* water.mp3 in Resources */,
 				9464672D24AABBE800F8409A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +196,9 @@
 			files = (
 				9464672A24AABBE800F8409A /* ViewController.swift in Sources */,
 				9464672624AABBE800F8409A /* AppDelegate.swift in Sources */,
+				9464674324AABDD500F8409A /* URLExtensions.swift in Sources */,
 				9464672824AABBE800F8409A /* SceneDelegate.swift in Sources */,
+				9464673A24AABC0800F8409A /* AVPlayerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AVPlayerAudioLoop/AVPlayerAudioLoop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2DSCP4F3H;
 				INFOPLIST_FILE = AVPlayerAudioLoop/Info.plist;
@@ -302,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AVPlayerAudioLoop/AVPlayerAudioLoop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2DSCP4F3H;
 				INFOPLIST_FILE = AVPlayerAudioLoop/Info.plist;
